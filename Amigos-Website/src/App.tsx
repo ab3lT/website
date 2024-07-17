@@ -1,11 +1,11 @@
 import "./App.css";
-import { Button, ButtonGroup } from "@chakra-ui/react";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <h1>
-      <Button colorScheme="blue">Button</Button>
-    </h1>
+    <div>
+      <Footer />
+    </div>
   );
 }
 
