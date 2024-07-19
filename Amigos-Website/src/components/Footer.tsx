@@ -8,10 +8,11 @@ import {
   faTiktok,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
+import amigosLogo from "./amigos-logo.png";
 
 const Footer = () => {
   return (
-    <footer>
+    <footer style={{ color: "#FF7400" }}>
       <div className="container">
         <div className="row">
           <div className="col-md-3">
@@ -44,7 +45,7 @@ const Footer = () => {
               ]}
             />
           </div>
-          <div className="col-md-3">
+          <div className="col-md-3" style={{ marginBottom: 20 }}>
             <FooterList
               title="Our Products"
               items={[
@@ -55,7 +56,7 @@ const Footer = () => {
               ]}
             />
           </div>
-          <div className="col-md-3">
+          <div className="col-md-3" style={{ marginBottom: 20 }}>
             <FooterList
               title="Reach us"
               items={[
@@ -69,9 +70,11 @@ const Footer = () => {
         <div className="row">
           <div className="col-md-4">
             <img
-              src="amigos-logo.png"
+              src={amigosLogo}
               alt="Amigos Logo"
               className="footer-logo"
+              width="50"
+              height="50"
             />
           </div>
           <div className="col-md-4 text-center">
