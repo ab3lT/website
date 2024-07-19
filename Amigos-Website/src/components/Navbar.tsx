@@ -10,11 +10,12 @@ const Navbar = () => {
       templateRows={"40px 1fr"}
       templateColumns={"100px 1fr"}
       height="100%"
+      boxShadow='xl'
     >
       <GridItem area= 'logo'>
         <Box>
           <HStack justifyContent={"space-between"} padding="10px">
-              <Image src={logo} boxSize="60px" />
+              <Image src={logo} boxSize="70px" />
           </HStack>
         </Box>
       </GridItem>
@@ -25,13 +26,15 @@ const Navbar = () => {
           </HStack>
         </Box>
       </GridItem>
-      <GridItem area= 'bottom' bg= 'dodgerblue'>
-        <Box justifyContent={'space-between'}>
-          <Link href="#">About</Link>
-          <Link href="#">About</Link>
-          <Link href="#">About</Link>
-          <Link href="#">About</Link>
-          <Link href="#">About</Link>
+      <GridItem area= 'bottom'>
+        <Box>
+          <HStack justifyContent='right' spacing='50px' padding='10px' paddingX= '100px'>
+          <Link href="Home" _hover={ {bg: '#36454F', color: 'white' }}>Home</Link>
+          <Link href="about">About </Link>
+          <Link href="services">Services</Link>
+          <Link href="membership">Membership</Link>
+          <Link href="contact">Contact Us</Link>
+          </HStack>
         </Box>
       </GridItem>
     </Grid>
