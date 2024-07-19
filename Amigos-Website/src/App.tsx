@@ -7,7 +7,6 @@ import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import Membership from "./pages/Membership";
 import Services from "./pages/Services";
-import Carousel from "./components/Carausel";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {

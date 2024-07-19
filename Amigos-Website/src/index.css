@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 /* In your App.css or index.css */
 @import "slick-carousel/slick/slick.css";
 @import "slick-carousel/slick/slick-theme.css";
-=======
 .orange-text {
     color: #FF7400;
   }
@@ -14,4 +12,3 @@
   .FooterList li {
     margin-bottom: 10px; /* add some margin between list items */
   }
->>>>>>> 6a05f9d5facbb70d10317d75b2523e880d4f8fd2
