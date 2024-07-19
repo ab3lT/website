@@ -33,8 +33,8 @@ function App() {
               </Routes>
             </BrowserRouter>
       </GridItem>
-      <GridItem area="footer" bg="pink">
-        <p>footer section</p>
+      <GridItem area="footer" bg="charcoal grey">
+        <Footer /> {/* Replace with Footer component */}
       </GridItem>
     </Grid>
   );

@@ -1,10 +1,27 @@
 interface FooterListProps {
-  children: React.ReactNode;
+  title: string;
+  items?: { label: string; href?: string }[];
 }
-const FooterList: React.FC<FooterListProps> = ({ children }) => {
+
+const FooterList: React.FC<FooterListProps> = ({ title, items }) => {
   return (
-    <div className="w-full sm:w-1/2 md:w-1/4 lg:w-1/6 mb-6 flex flex-col gap-2">
-      {children}
+    <div>
+      <h5>{title}</h5>
+      {items ? (
+        <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+          {items.map((item, index) => (
+            <li key={index} style={{ display: "block" }}>
+              {item.href ? (
+                <a href={item.href}>{item.label}</a>
+              ) : (
+                <p>{item.label}</p>
+              )}
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p>No items</p>
+      )}
     </div>
   );
 };
