@@ -1,4 +1,4 @@
-import FooterList from "./FooterList";
+import { Box, Flex, Grid, GridItem, Heading, Link } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faTelegram,
@@ -9,13 +9,14 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import amigosLogo from "../assets/amigos-logo.png";
+import FooterList from "./FooterList";
 
 const Footer = () => {
   return (
     <footer style={{ color: "#FF7400" }}>
-      <div className="container">
-        <div className="row">
-          <div className="col-md-3">
+      <Box maxW="container.lg" mx="auto" p={4}>
+        <Grid templateColumns="repeat(4, 1fr)" gap={4}>
+          <GridItem>
             <FooterList
               title="Location"
               items={[
@@ -33,8 +34,8 @@ const Footer = () => {
                 },
               ]}
             />
-          </div>
-          <div className="col-md-3">
+          </GridItem>
+          <GridItem>
             <FooterList
               title="Office Hours"
               items={[
@@ -44,8 +45,8 @@ const Footer = () => {
                 { label: "08:30 AM to 12:30 PM" },
               ]}
             />
-          </div>
-          <div className="col-md-3" style={{ marginBottom: 20 }}>
+          </GridItem>
+          <GridItem>
             <FooterList
               title="Our Products"
               items={[
@@ -55,8 +56,8 @@ const Footer = () => {
                 { label: "Member Service", href: "/member-service" },
               ]}
             />
-          </div>
-          <div className="col-md-3" style={{ marginBottom: 20 }}>
+          </GridItem>
+          <GridItem>
             <FooterList
               title="Reach us"
               items={[
@@ -65,57 +66,39 @@ const Footer = () => {
                 { label: "Call on 8511", href: "#" },
               ]}
             />
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-md-4">
-            <img
-              src={amigosLogo}
-              alt="Amigos Logo"
-              className="footer-logo"
-              width="50"
-              height="50"
-            />
-          </div>
-          <div className="col-md-4 text-center">
+          </GridItem>
+        </Grid>
+        <Flex justify="space-between" align="center" py={4}>
+          <Box>
+            <img src={amigosLogo} alt="Amigos Logo" width="50" height="50" />
+          </Box>
+          <Box textAlign="center">
             <p>&copy; 2016-2024 Amigos Credit and Saving Coop</p>
-          </div>
-          <div className="col-md-4 text-right">
-            <ul className="social-media-list">
-              <li style={{ display: "inline-block", marginRight: "10px" }}>
-                <a href="#" target="_blank">
-                  <FontAwesomeIcon icon={faTelegram} />
-                </a>
-              </li>
-              <li style={{ display: "inline-block", marginRight: "10px" }}>
-                <a href="#" target="_blank">
-                  <FontAwesomeIcon icon={faFacebook} />
-                </a>
-              </li>
-              <li style={{ display: "inline-block", marginRight: "10px" }}>
-                <a href="#" target="_blank">
-                  <FontAwesomeIcon icon={faInstagram} />
-                </a>
-              </li>
-              <li style={{ display: "inline-block", marginRight: "10px" }}>
-                <a href="#" target="_blank">
-                  <FontAwesomeIcon icon={faLinkedin} />
-                </a>
-              </li>
-              <li style={{ display: "inline-block", marginRight: "10px" }}>
-                <a href="#" target="_blank">
-                  <FontAwesomeIcon icon={faTiktok} />
-                </a>
-              </li>
-              <li style={{ display: "inline-block" }}>
-                <a href="#" target="_blank">
-                  <FontAwesomeIcon icon={faYoutube} />
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+          </Box>
+          <Box textAlign="right">
+            <Flex justify="space-between" align="center" gap={2}>
+              <Link href="#" target="_blank" _hover={{ color: "blue.500" }}>
+                <FontAwesomeIcon icon={faTelegram} />
+              </Link>
+              <Link href="#" target="_blank" _hover={{ color: "blue.500" }}>
+                <FontAwesomeIcon icon={faFacebook} />
+              </Link>
+              <Link href="#" target="_blank" _hover={{ color: "blue.500" }}>
+                <FontAwesomeIcon icon={faInstagram} />
+              </Link>
+              <Link href="#" target="_blank" _hover={{ color: "blue.500" }}>
+                <FontAwesomeIcon icon={faLinkedin} />
+              </Link>
+              <Link href="#" target="_blank" _hover={{ color: "blue.500" }}>
+                <FontAwesomeIcon icon={faTiktok} />
+              </Link>
+              <Link href="#" target="_blank" _hover={{ color: "blue.500" }}>
+                <FontAwesomeIcon icon={faYoutube} />
+              </Link>
+            </Flex>
+          </Box>
+        </Flex>
+      </Box>
     </footer>
   );
 };
