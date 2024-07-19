@@ -1,4 +1,4 @@
-import logo from "../assets/logo2.png";
+import logo from "../assets/amigos-logo.png";
 import { HStack, Image, Grid, GridItem, Box, Link } from "@chakra-ui/react";
 import ColorModeSwitch from "./ColorModeSwitch";
 

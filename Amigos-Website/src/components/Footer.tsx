@@ -8,7 +8,7 @@ import {
   faTiktok,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
-import amigosLogo from "./amigos-logo.png";
+import amigosLogo from "../assets/amigos-logo.png";
 
 const Footer = () => {
   return (
