@@ -12,6 +12,7 @@ import amigosLogo from "../assets/amigos-logo.png";
 import FooterList from "./FooterList";
 
 const Footer = () => {
+
   return (
     <footer style={{ color: "#FF7400" }}>
       <Box maxW="container.lg" mx="auto" p={4}>
